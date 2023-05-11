@@ -1,0 +1,370 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    padding: 17px 0px;
+    height: 100vh;
+    overflow: hidden;
+}
+.flex-container{
+    display: flex;
+    overflow: hidden;
+}
+.shadow{
+    background-color: rgba(0, 0, 0, 0.075);
+    position: fixed;
+    top: 32px;
+    left: 45px;
+    box-shadow: -8px 10px 30px 0px rgba(0, 0, 0, 0.603);
+    height: 92vh;
+    width: 220px;
+    border-radius: 20px;
+    z-index: -100;
+}
+.column1{
+    margin-left: 30px;
+    background-image: linear-gradient(to bottom, rgb(51, 113, 138), skyblue);
+    height: 95vh;
+    border-radius: 15px;
+    z-index: 1;
+    padding: 30px 10px;
+    text-align: center;
+    color: white;
+    margin-right: 30px;
+    flex: 20%;
+}
+.company-name{
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-bottom: 1px solid white;
+    font-weight: 200;
+    padding-bottom: 20px;
+}
+.links-container{
+    margin-left: 20%;
+    margin-top: 50px;
+    font-size: 21px;
+    text-align: left;
+}
+.link{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 30px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+#link{
+    display: inline-block;
+    position: relative;
+}
+#link:hover{
+    cursor: pointer;
+}
+#link:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: -8;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.74);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+#link:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+.logout{
+    position: absolute;
+    bottom: 45px;
+    left: 100px;
+    letter-spacing: 1px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+}
+.column2{
+    margin-right: 30px;
+    padding-top:20px;
+    font-family: sans-serif;
+    flex: 80%;
+    z-index: 1;
+    height: 100vh;
+    overflow: hidden;
+}
+.greetings-container{
+    padding-top: 20px;
+    padding-left: 50px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+}
+.greetings{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+}
+#bttn{
+    box-shadow: 0px 2px 10px rgba(32, 32, 32,.3);
+    color: white;
+    background-image: linear-gradient(to bottom, rgb(51, 113, 138), rgb(87, 164, 194));
+    border: 0px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.dashboard-container, .dashboard{
+    height:84%;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 30px;
+}
+.dashboard{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+
+}
+.appointments-container, .notifications-container, .history-container{
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px rgba(110, 104, 104, 0.432);
+    height: 50%;
+    width: 30%;
+}
+#link2{
+    display: inline-block;
+    position: relative;
+}
+#link2:hover{
+    cursor: pointer;
+}
+#link2:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: -8;
+    left: 0;
+    background-color: rgba(74, 74, 248, 0.596);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+#link2:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
+.appointments-container{
+    margin-right: 60px;
+}
+.notifications-container{
+    margin-right: 60px;
+}
+.count-info{
+    height: 30%;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    font-family: sans-serif;
+    font-weight:100;
+    font-size: larger;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(51, 113, 138);
+}
+.count{
+    background-color: rgb(250, 248, 248);
+    height: 70%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 110px;
+    text-align: center;
+    padding-top: 5px;
+    color: rgb(78, 123, 141);
+}
+.create{
+    display: block;
+    position: fixed;
+    top: 40px;
+    right: 60px;
+    padding: 20px;
+    z-index: 1;
+}
+.table-container{
+    margin-top: 70px;
+    width: 100%;
+    height: 75%;
+    background-color: white;
+    overflow: hidden;
+}
+.table{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    box-shadow: 0px 2px 12px rgba(32, 32, 32,.3);
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+}
+tr{
+    width: 20px;
+    height: 75px;
+}
+tr:nth-child(odd){
+    background-color: #eeee;
+}
+#name{
+    padding: 10px 0px 10px 40px;
+    text-align: left;
+}
+td{
+    text-align: center;
+    padding: 8px 0px;
+    font-size: 15px;
+}
+th{
+    background: rgb(51, 113, 138);
+    color: white;
+    position:sticky;
+    top: 0;    
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.edit{
+    float: right;
+    color: white;
+    background-image: linear-gradient(to bottom, rgb(51, 113, 138), rgb(87, 164, 194));
+    border: 0px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    width: 100px;
+    text-decoration: none;
+}
+.cancel{
+    float: left;
+    color: white;
+    background-image: linear-gradient(to bottom, rgb(148, 37, 22), rgb(218, 92, 60));
+    border: 0px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    width: 100px;
+    margin-left: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.modal-container{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    padding: 30px 0px;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    background: rgba(66, 66, 66, 0.5);
+    box-shadow: inset 0 0 2000px 0 rgb(255, 255, 255 ,.5);
+    backdrop-filter: saturate(110%) blur(5px);   
+    overflow: hidden; 
+}
+.modal{
+    background-color: white;
+    padding: 20px 0px;
+    color: black;
+    height: 90vh;
+    width: 40%;
+    z-index: 2;
+    border-radius: 20px;
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    /* cssgradient.io */
+}
+.form-header{
+    margin-bottom: 50px;
+}
+.form-container{
+    width: 100%;
+    align-content: center;
+    padding: 20px 50px;
+}
+
+input{
+    padding: 20px 20px 5px 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+#btn{
+    width: 40%;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    border-bottom: none;
+}
+.bttn-container{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+button,#btn:hover{
+    cursor: pointer;
+}
+.close{
+    position: absolute;
+    top: 10;
+    right: 70;
+    font-size: 65px;
+    color:white;
+}
+.close:hover{
+    cursor: pointer;
+}
+#checkbox{
+    padding: 0;
+    margin: 8px 0 5px 0;
+    border: none;
+    width: 20px;
+}
+#msg{
+    position: relative;
+    top: 0;
+}
+.bttn-container{
+    margin-top: 2%;
+}
+.fullname{
+    margin-bottom: 50px;
+}
+.type{
+    display: flex;
+    margin-top:17px;
+}
+#date{
+    margin-bottom: 20px; 
+}
+select{
+    flex: 35%;
+    margin-right: 20px;
+    height: 43px;
+    padding: 11px 20px 9px 10px;
+}
+option{
+    text-align: left;
+}
